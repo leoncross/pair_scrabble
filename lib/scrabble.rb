@@ -9,8 +9,7 @@ class Scrabble
   }
 
   def initialize(word)
-    word == nil ? word = " " : word = word
-    word == " \t\n" ? word = " " : word = word
+    word == nil || word == " \t\n" ? word = " " : word = word
     @word = word.downcase
     word_to_letter
   end
