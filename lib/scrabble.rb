@@ -9,6 +9,8 @@ class Scrabble
   }
 
   def initialize(word)
+    word == nil ? word = " " : word = word
+    word == " \t\n" ? word = " " : word = word
     @word = word.downcase
     word_to_letter
   end
@@ -31,5 +33,5 @@ class Scrabble
 end
 
 
-scrabble = Scrabble.new("leon")
-puts scrabble.score
+scrabble = Scrabble.new(nil)
+scrabble.score
